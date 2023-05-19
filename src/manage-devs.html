@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Assignment Manager - Manage Engineers</title>
+	</head>
+	<body>
+		<style type="text/css">
+			#engineer-list {
+				display: flex;
+				flex-direction: column;
+			}
+
+			#engineer-list > div {
+				display: flex;
+				align-items: center;
+			}
+		</style>
+		<a href="index.html">Home</a>
+		<h1>Engineer Details</h1>
+		<div id="engineer-list">
+			<div>
+				<span>Name:</span>
+				<input type="text" value="David Urbina" />
+				<button style="background-color: green; color: white">Save</button>
+				<button style="background-color: red; color: white">Delete</button>
+			</div>
+			<div>
+				<span>Name:</span>
+				<input type="text" value="David Urbina" />
+				<button style="background-color: green; color: white">Save</button>
+				<button style="background-color: red; color: white">Delete</button>
+			</div>
+		</div>
+		<button id="new-engineer" style="background-color: blue; color: white">+</button>
+		<script type="text/javascript">
+			document.querySelector('#new-engineer').addEventListener('click', () => {
+				let outerDiv = document.createElement('div');
+
+				let nameSpan = document.createElement('span');
+				nameSpan.innerHTML = 'Name:';
+				outerDiv.appendChild(nameSpan);
+
+				let nameInput = document.createElement('input');
+				nameInput.type = 'text';
+				outerDiv.appendChild(nameInput);
+
+				let saveButton = document.createElement('button');
+				saveButton.innerHTML = 'Save';
+				saveButton.style = 'background-color: green; color: white';
+				outerDiv.appendChild(saveButton);
+
+				saveButton = document.createElement('button');
+				saveButton.innerHTML = 'Delete';
+				saveButton.style = 'background-color: red; color: white';
+				outerDiv.appendChild(saveButton);
+
+				document.querySelector('#engineer-list').appendChild(outerDiv);
+			});
+		</script>
+	<body>
+</html>
